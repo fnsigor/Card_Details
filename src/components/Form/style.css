@@ -1,0 +1,76 @@
+form {
+    width: 80%;
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    border: 1px solid var(--Dark-grayish-violet);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+label{
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .5px;
+    word-spacing: 2px;
+    
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.numbers {
+    flex-direction: row;
+    
+    gap: 20px;
+    margin-bottom: 20px;
+
+    
+}
+
+.cvc input{
+    width: 100%;
+}
+
+.exp-inputs{
+    display: flex;
+    gap: 5px;
+    
+}
+
+.cvc, div.exp{
+    flex-grow: 1;
+}
+
+.exp-inputs input{
+    width: 100%;
+}
+
+
+button{
+    padding: 10px;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--Very-dark-violet);
+}
+
+p {
+    color: #bf1650;
+  }
+  
+  p::before {
+    display: inline;
+    content: "⚠ ";
+  }

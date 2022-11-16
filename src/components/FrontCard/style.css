@@ -1,0 +1,48 @@
+div.card {
+    width: min-content;
+    position: relative;
+}
+
+div.card img {
+    width: 300px;
+}
+
+.card-elements{
+    font-size: 14px;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding:  10px 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    letter-spacing: .5px;
+    word-spacing: 2px;
+}
+
+svg{
+    margin-bottom: 30px;
+}
+
+.card-number{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.card-name{
+    text-transform: uppercase;
+}
+
+.card-name-exp{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+

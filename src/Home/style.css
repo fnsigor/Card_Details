@@ -1,0 +1,31 @@
+.cards-container {
+    background-image: url('../assets/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 80%;
+
+    /* background-color: red; */
+
+    height: 35vh;
+
+    position: relative;
+
+    margin-bottom: 40px;
+}
+
+.cards-container>div {
+    position: absolute;
+}
+
+
+.cards-container>div:first-child {
+    z-index: 2;
+    bottom: 1%;
+    left: 5%;
+}
+
+
+.cards-container>div:last-child {
+    top: 5%;
+    right: 5%;
+}

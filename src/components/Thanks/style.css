@@ -1,0 +1,20 @@
+.thanks-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.thanks-div h4{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.thanks-div p{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.thanks-div button{
+    width: 80%;
+    max-width: 300px;
+}
