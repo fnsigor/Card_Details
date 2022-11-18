@@ -1,0 +1,39 @@
+div.card {
+    width: min-content;
+    position: relative;
+}
+
+div.card img {
+    width: 26rem;
+}
+
+.cvv{
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    font-size: 1.6rem;
+    color: #fff;
+
+    letter-spacing: 0.05rem;
+}
+
+@media (min-width: 1100px) {
+    div.card img {
+        width: 35rem;
+    }
+
+    .cvv{
+        top: 43%;
+        
+    }
+}
+
+@media (min-width: 1400px) {
+    div.card img {
+        width: 45rem;
+    }
+
+    .cvv{
+        font-size: 1.8rem;
+    }
+}

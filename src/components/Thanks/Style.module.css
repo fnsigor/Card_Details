@@ -1,0 +1,47 @@
+.thanksDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.thanksDiv svg {
+    margin-bottom: 2rem;
+}
+
+.thanksDiv h4 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.thanksDiv p {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    color: rgba(64, 173, 64, 0.932);
+}
+
+.thanksDiv p::before {
+    content: "";
+}
+
+.thanksDiv button {
+    width: 80%;
+    max-width: 30rem;
+}
+
+@media (min-width: 1400px) {
+    .thanksDiv h4 {
+        font-size: 4rem;
+        margin-bottom: .5rem;
+    }
+    
+    .thanksDiv p {
+        font-size: 2.2rem;
+        margin-bottom: 4.5rem;
+        color: rgba(64, 173, 64, 0.932);
+    } 
+
+    .thanksDiv button {
+        width: 30rem;
+    }
+}

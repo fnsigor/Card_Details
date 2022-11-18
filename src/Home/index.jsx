@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
 import { Form } from '../components/Form'
 import { FrontCard } from '../components/FrontCard'
-import { BackCard } from '../components/BackCard'
+import { BackCard } from '../components/BackCard/Index'
 import { Thanks } from '../components/Thanks'
-import './style.css'
-
-
-import { useForm } from "react-hook-form";
+import css from './index.module.css'
 
 
 export function Home() {
@@ -18,7 +15,7 @@ export function Home() {
     const [cvc, setCvc] = useState('000')
     const [detailsStatus, setDetailsStatus] = useState(false)
 
-    function resetCard(){
+    function resetCard() {
         setCardHolder("Jane Appleseed")
         setCardNumber("0000 0000 0000 0000")
         setCardMonth("MM")
@@ -27,16 +24,19 @@ export function Home() {
     }
 
     return (
-        <>
-            <div className="cards-container">
-                <FrontCard
-                    name={cardHolder}
-                    number={cardNumber}
-                    mm={cardMonth}
-                    yy={cardYear}
-                />
-                <BackCard cvc={cvc} />
+        <main>
+            <div className={css.cardsContainer}>
+                <div className={css.space}>
+                    <FrontCard
+                        name={cardHolder}
+                        number={cardNumber}
+                        mm={cardMonth}
+                        yy={cardYear}
+                    />
+                    <BackCard cvc={cvc} />
+                </div>
             </div>
+            <div className={css.content}>
 
             {detailsStatus
                 ? <Thanks setDetailsStatus={setDetailsStatus} resetCard={resetCard} />
@@ -49,8 +49,10 @@ export function Home() {
                     setDetailsStatus={setDetailsStatus}
                 />
             }
+            </div>
 
 
-        </>
+
+        </main>
     )
 }

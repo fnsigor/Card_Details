@@ -1,7 +1,7 @@
 import { ErrorMessage } from "@hookform/error-message";
 import { useForm } from "react-hook-form";
 import React, { useState } from 'react'
-import './style.css'
+import css from'./Index.module.css'
 
 export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCardYear, setDetailsStatus }) {
 
@@ -16,7 +16,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
 
     return (
         <form onSubmit={handleSubmit( e => setDetailsStatus(true))}>
-            <div className="inputBox">
+            <div className={css.inputBox}>
                 <label htmlFor="cardholder" >Cardholder name</label>
                 <input
                     maxLength={23} placeholder="e.g Jane Appleseed"
@@ -24,7 +24,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                         onChange: e => setCardHolder(e.target.value),
                         required: "This input is required.",
                         pattern: {
-                            value: /^[A-Za-z]+$/i,
+                            value: /^[A-Za-z\s]+$/i,
                             message: "Alphabetical characters only"
                         },
                         minLength: {
@@ -47,7 +47,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                 />
             </div>
 
-            <div className="inputBox">
+            <div  className={css.inputBox}>
                 <label htmlFor="cardnumber" >Card Number</label>
                 <input
                     maxLength={16} placeholder="e.g 1234 5678 9123 0000"
@@ -77,13 +77,13 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                 />
             </div>
 
-            <div className=" numbers">
+            <div className={css.numbers}>
 
-                <div className="containerInputs">
+                <div className={css.containerInputs}>
 
-                    <div className="exp inputBox"  >
+                    <div className={`${css.inputBox} ${css.exp}`} >
                         <label id='lblRange'>EXP. DATE &#40;MM&#47;YY&#41;</label>
-                        <div className="exp-inputs">
+                        <div className={css.expInputs}>
                             <input
                                 maxLength={2} placeholder="MM"
                                 {...register("month", {
@@ -116,7 +116,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                         </div>
                     </div>
 
-                    <div className="inputBox cvc">
+                    <div className={`${css.inputBox} ${css.cvc}`}>
                         <label htmlFor="cvc" >CVC</label>
                         <input
                             maxLength={3} placeholder="e.g 123"
@@ -135,7 +135,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                     </div>
                 </div>
 
-                <div className="containerErrors">
+                <div className={css.containerErrors}>
                     <ErrorMessage
                         errors={errors}
                         name="month"
