@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Form } from '../components/Form'
 import { FrontCard } from '../components/FrontCard'
-import { BackCard } from '../components/BackCard/Index'
+import { BackCard } from '../components/BackCard'
 import { Thanks } from '../components/Thanks'
 import css from './index.module.css'
 
