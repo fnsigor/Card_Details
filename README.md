@@ -10,6 +10,9 @@ A challenge from <a href="https://www.frontendmentor.io/">frontendmentor.io</a> 
 
 </br>
 
+### Link: <a target="_blank" href="https://card-details-ruddy.vercel.app/">Card Details<a/>
+</br>
+
 <div align="center" >
 <img width="90%" align="center" src="https://user-images.githubusercontent.com/86209425/202814297-db41f0fa-0d17-4703-9e2f-2c25f517e90c.png"/></br></br>
 <br>
