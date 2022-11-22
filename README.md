@@ -12,6 +12,11 @@
 <!-- PROJECT CONTENT -->
 <div align="left">
 
+## About
+* This is my first project using React. <br>
+* I used <a href="https://react-hook-form.com/">React Hook Form</a> to help me with validation
+
+<br><br>
 
 ## Built With
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
