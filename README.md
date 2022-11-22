@@ -1,28 +1,60 @@
-# Card Details with React 
+<!-- PROJECT NAME -->
+<h1 align="center">Card Details</h1>
+<h4 align="center">A challenge from <a href="https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw">frontendmentor.io</a><h4/>
 
-A challenge from <a href="https://www.frontendmentor.io/">frontendmentor.io</a> </br> </br>
+<!-- PROJECT MAIN IMAGE -->
+<div align="center">
+<img src="https://user-images.githubusercontent.com/86209425/202814297-db41f0fa-0d17-4703-9e2f-2c25f517e90c.png" width="80%" >
+<div/>
 
+<br><br>
+  
+<!-- PROJECT CONTENT -->
+<div align="left">
+
+
+## Built With
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src=https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB/>
+
+<br><br>
+
+## Features
+The main features of the application are:
 * Fill in the form and see the card details update in real-time
 * Receive error messages when the form is submitted if:
     * Any input field is empty
     * The card number, expiry date, or CVC fields are in the wrong format
-* View the optimal layout depending on your device's screen size
 
-</br>
-
-### Link: <a target="_blank" href="https://card-details-ruddy.vercel.app/">Card Details<a/>
-</br>
-
-<div align="center" >
-<img width="90%" align="center" src="https://user-images.githubusercontent.com/86209425/202814297-db41f0fa-0d17-4703-9e2f-2c25f517e90c.png"/></br></br>
 <br>
-<div>
-<img  width="35%"  src="https://user-images.githubusercontent.com/86209425/202814443-60c531b2-200f-4e67-acd1-eeb1ea236a01.png"/>
-&nbsp; &nbsp; &nbsp; &nbsp;
-<img  width="35%"  src="https://user-images.githubusercontent.com/86209425/202815877-7b95f7e3-ab90-4ac9-aa10-7e5211b65ce5.png"/>
-</div>
 
-</div>
+## Getting started
 
+* <a href="https://card-details-ruddy.vercel.app">Click this link<a/>
 
+<br>
+
+## Links
+  - Deploy on Vercel: https://card-details-ruddy.vercel.app/
+  - Repository: https://github.com/fnsigor/Card_Details
+  
+<br>
+
+## Services Used
+* Github
+* Vercel
+    
+<br>
+
+## Authors
+<a href="https://github.com/fnsigor">Igor Fernandes<a/>
+    
+<br>
+  
+<div/> 
+<!--END CONTENT-->                                                       
+
+<div align="center"><i>Thanks to visiting me and good coding!<i/><div/>
 
