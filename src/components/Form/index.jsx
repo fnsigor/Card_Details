@@ -130,7 +130,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                                 },
                                 minLength: {
                                     value: 3,
-                                    message: "CVC input must have 2 characters"
+                                    message: "CVC input must have 3 characters"
                                 },
                             })} />
                     </div>

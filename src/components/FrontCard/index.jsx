@@ -6,7 +6,7 @@ import { mask as masker } from 'remask'
 
 export function FrontCard({ number, name, mm, yy }) {
 
-    const [mask, setMask] = useState(["9999 9999 9999 9999"]);
+    const [mask, setMask] = useState(["SSSS SSSS SSSS SSSS"]);
     const maskedNumber= masker(number, mask)
 
 
