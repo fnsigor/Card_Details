@@ -16,33 +16,27 @@ main {
     background-size: cover;
     background-size: 100% 80%;
 
-
-
     height: 35vh;
+    min-height: fit-content;
 
     margin-bottom: 4rem;
-}
 
-.space {
+    border-bottom: 2px solid red;
+
     position: relative;
-
-    margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
-    height: 100%;
 }
 
-.space>div {
+.cardsContainer >div {
     position: absolute;
 }
 
-.space>div:first-child {
+.cardsContainer >div:first-child {
     left: 4%;
     bottom: 0;
     z-index: 2;
 }
 
-.space>div:last-child {
+.cardsContainer >div:last-child {
     right: 4%;
     top: 8%;
 }
