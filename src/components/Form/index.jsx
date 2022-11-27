@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import React, { useState } from 'react'
 import css from'./Index.module.css'
 
+
 export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCardYear, setDetailsStatus }) {
 
     const {
@@ -55,7 +56,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                         onChange: e => setCardNumber(e.target.value),
                         required: "This input is required.",
                         pattern: {
-                            value: /\d+/,
+                            value: (/^[0-9]+$/),
                             message: "This input is number only."
                         },
                         minLength: {
@@ -90,7 +91,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                                     onChange: e => setCardMonth(e.target.value),
                                     required: "Month input is required.",
                                     pattern: {
-                                        value: /\d+/,
+                                        value: /^[0-9]+$/,
                                         message: "Month input is number only."
                                     },
                                     minLength: {
@@ -104,7 +105,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                                     onChange: e => setCardYear(e.target.value),
                                     required: "Year input is required.",
                                     pattern: {
-                                        value: /\d+/,
+                                        value: /^[0-9]+$/,
                                         message: "Year input is number only."
                                     },
                                     minLength: {
@@ -117,14 +118,14 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                     </div>
 
                     <div className={`${css.inputBox} ${css.cvc}`}>
-                        <label htmlFor="cvc" >CVC</label>
+                        <label >CVC</label>
                         <input
                             maxLength={3} placeholder="e.g 123"
                             {...register("cvc", {
                                 onChange: e => setCvc(e.target.value),
                                 required: "CVC input is required.",
                                 pattern: {
-                                    value: /\d+/,
+                                    value: /^[0-9]+$/,
                                     message: "CVC input is number only."
                                 },
                                 minLength: {

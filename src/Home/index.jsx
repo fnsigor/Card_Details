@@ -5,7 +5,6 @@ import { BackCard } from '../components/BackCard'
 import { Thanks } from '../components/Thanks'
 import css from './index.module.css'
 
-
 export function Home() {
 
     const [cardHolder, setCardHolder] = useState("Jane Appleseed")
@@ -38,17 +37,17 @@ export function Home() {
             </div>
             <div className={css.content}>
 
-            {detailsStatus
-                ? <Thanks setDetailsStatus={setDetailsStatus} resetCard={resetCard} />
-                : <Form
-                    setCardHolder={setCardHolder}
-                    setCardNumber={setCardNumber}
-                    setCardMonth={setCardMonth}
-                    setCvc={setCvc}
-                    setCardYear={setCardYear}
-                    setDetailsStatus={setDetailsStatus}
-                />
-            }
+                {detailsStatus
+                    ? <Thanks setDetailsStatus={setDetailsStatus} resetCard={resetCard} />
+                    : <Form
+                        setCardHolder={setCardHolder}
+                        setCardNumber={setCardNumber}
+                        setCardMonth={setCardMonth}
+                        setCvc={setCvc}
+                        setCardYear={setCardYear}
+                        setDetailsStatus={setDetailsStatus}
+                    />
+                }
             </div>
 
 

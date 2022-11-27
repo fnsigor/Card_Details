@@ -1,9 +1,13 @@
 import img from '../../assets/bg-card-front.png'
 import css from'./Style.module.css'
+import React, {useState} from 'react'
+import { mask as masker } from 'remask'
+
 
 export function FrontCard({ number, name, mm, yy }) {
 
-   
+    const [mask, setMask] = useState(["9999 9999 9999 9999"]);
+    const maskedNumber= masker(number, mask)
 
 
 
@@ -19,7 +23,7 @@ export function FrontCard({ number, name, mm, yy }) {
                         <div></div>
                         <div></div>
                     </div>
-                    <span className={css.cardNumber}> {number}</span>
+                    <span className={css.cardNumber}> {maskedNumber}</span>
                     <div className={css.cardNameExp}>
                         <span className={css.cardName}>{name}</span>
                         <div className={css.cardExp}>
