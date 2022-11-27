@@ -25,7 +25,7 @@ export function Home() {
     return (
         <main>
             <div className={css.cardsContainer}>
-                
+                <div className={css.space}>
                     <FrontCard
                         name={cardHolder}
                         number={cardNumber}
@@ -33,7 +33,7 @@ export function Home() {
                         yy={cardYear}
                     />
                     <BackCard cvc={cvc} />
-                
+                </div>
             </div>
             <div className={css.content}>
 
