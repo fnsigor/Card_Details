@@ -14,7 +14,7 @@ export function FrontCard({ number, name, mm, yy, frontFloat }) {
 
     return (
 
-        <div className={ `absoluteBox x ${frontFloat ? "runningAnimation" : "pausedAnimation" }` } id="front">
+        <div className={ `absoluteBox x ${frontFloat ? "animateFrontCard" : "pausedAnimation" }` } id="front">
             <div className={css.card} >
                 <img src={img} alt="Frente do cartão" />
 

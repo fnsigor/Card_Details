@@ -4,7 +4,7 @@ import css from'./Style.module.css'
 export function BackCard({cvc, backFloat}) {
 
     return (
-        <div  className={ `absoluteBox notBugBackCardAnimation ${backFloat ? "animate" : "pausedAnimation" }` }  id="back">
+        <div  className={ `absoluteBox ${backFloat ? "animateBackCard" : "pausedAnimation" }` }  id="back">
             <div className={css.card} >
                 <img src={img} alt="Verso do cartão" />
                 <span className={css.cvv}>{cvc}</span>

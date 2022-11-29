@@ -11,7 +11,7 @@ export function Thanks({ setDetailsStatus, resetCard }) {
             <h4>Thank You!</h4>
             <p>We've added your card details</p>
 
-            <button onClick={e => {
+            <button onClick={ () => {
                 setDetailsStatus(false)
                 resetCard()
             }}>Continue</button>

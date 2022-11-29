@@ -17,33 +17,27 @@ Body {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-
-
-
 }
 
-.animate {
-  animation: animation 1s ease-in-out infinite alternate;
-}
-
-.notBugBackCardAnimation {
-  animation-name: animation2;
-  animation-duration: infinite;
-  animation-timing-function: ease-in-out;
-}
 
 .pausedAnimation{
   animation-play-state: paused;
 }
 
-.runningAnimation{
+.animateBackCard{
+  animation: animateBackCard 1s ease-in-out infinite alternate;
   animation-play-state: running;
+}
+
+.animateFrontCard{
+  animation-play-state: running;
+  animation: animateFrontCard 1s ease-in-out infinite alternate;
 }
 
 
 @media (min-width: 1100px) {
 
-  @keyframes animation {
+  @keyframes animateFrontCard {
     from {
       transform: translateY(-10%);
     }
@@ -54,7 +48,7 @@ Body {
     }
   }
 
-  @keyframes animation2 {
+  @keyframes animateBackCard {
     from {
       transform: translateX(-175px) translateY(-10%);
     }

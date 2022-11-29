@@ -25,7 +25,11 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
     }
 
     return (
-        <form onSubmit={handleSubmit( e => setDetailsStatus(true))}>
+        <form onSubmit={handleSubmit( () => {
+            setDetailsStatus(true) 
+            setFrontFloat(false)
+            setBackFloat(false)
+            } )}>
             <div className={css.inputBox}>
                 <label htmlFor="cardholder" >Cardholder name</label>
                 <input onFocus={() => animateFrontCard()}
@@ -59,7 +63,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
 
             <div  className={css.inputBox}>
                 <label htmlFor="cardnumber" >Card Number</label>
-                <input
+                <input onFocus={() => animateFrontCard()}
                     maxLength={16} placeholder="e.g 1234 5678 9123 0000"
                     {...register("number", {
                         onChange: e => setCardNumber(e.target.value),
@@ -94,7 +98,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                     <div className={`${css.inputBox} ${css.exp}`} >
                         <label id='lblRange'>EXP. DATE &#40;MM&#47;YY&#41;</label>
                         <div className={css.expInputs}>
-                            <input
+                            <input onFocus={() => animateFrontCard()}
                                 maxLength={2} placeholder="MM"
                                 {...register("month", {
                                     onChange: e => setCardMonth(e.target.value),
@@ -108,7 +112,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
                                         message: "Month input must have 2 characters"
                                     },
                                 })} />
-                            <input
+                            <input onFocus={() => animateFrontCard()}
                                 maxLength={2} placeholder="YY"
                                 {...register("year", {
                                     onChange: e => setCardYear(e.target.value),
