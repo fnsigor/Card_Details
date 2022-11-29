@@ -14,6 +14,9 @@ export function Home() {
     const [cvc, setCvc] = useState('000')
     const [detailsStatus, setDetailsStatus] = useState(false)
 
+    const [frontFloat, setFrontFloat] = useState(false)
+    const [backFloat, setBackFloat] = useState(false)
+
     function resetCard() {
         setCardHolder("Jane Appleseed")
         setCardNumber("0000 0000 0000 0000")
@@ -24,15 +27,20 @@ export function Home() {
 
     return (
         <main>
-            <div className={css.cardsContainer}>
+            <div className={css.cardsContainer}>           
                 <div className={css.space}>
                     <FrontCard
+                        frontFloat={frontFloat}
                         name={cardHolder}
                         number={cardNumber}
                         mm={cardMonth}
                         yy={cardYear}
                     />
-                    <BackCard cvc={cvc} />
+
+                    <BackCard
+                        cvc={cvc}
+                        backFloat={backFloat}
+                    />
                 </div>
             </div>
             <div className={css.content}>
@@ -40,6 +48,9 @@ export function Home() {
                 {detailsStatus
                     ? <Thanks setDetailsStatus={setDetailsStatus} resetCard={resetCard} />
                     : <Form
+                        setBackFloat={setBackFloat}
+                        setFrontFloat={setFrontFloat}
+
                         setCardHolder={setCardHolder}
                         setCardNumber={setCardNumber}
                         setCardMonth={setCardMonth}

@@ -81,10 +81,6 @@ main {
         gap: 20px;
     }
 
-    .space>div {
-        position: initial;
-    }
-
     .space>div:last-child {
         position: relative;
         left: 100%;

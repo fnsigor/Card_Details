@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import css from'./Index.module.css'
 
 
-export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCardYear, setDetailsStatus }) {
+export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCardYear, setDetailsStatus, setFrontFloat, setBackFloat }) {
 
     const {
         register,
@@ -14,12 +14,21 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
         criteriaMode: "all"
     });
 
+    function animateFrontCard(){
+        setBackFloat(false)
+        setFrontFloat(true)
+    }
+
+    function animateBackCard(){
+        setFrontFloat(false)
+        setBackFloat(true)
+    }
 
     return (
         <form onSubmit={handleSubmit( e => setDetailsStatus(true))}>
             <div className={css.inputBox}>
                 <label htmlFor="cardholder" >Cardholder name</label>
-                <input
+                <input onFocus={() => animateFrontCard()}
                     maxLength={23} placeholder="e.g Jane Appleseed"
                     {...register("holder", {
                         onChange: e => setCardHolder(e.target.value),
@@ -119,7 +128,7 @@ export function Form({ setCardHolder, setCardNumber, setCardMonth, setCvc, setCa
 
                     <div className={`${css.inputBox} ${css.cvc}`}>
                         <label >CVC</label>
-                        <input
+                        <input onFocus={() => animateBackCard()}
                             maxLength={3} placeholder="e.g 123"
                             {...register("cvc", {
                                 onChange: e => setCvc(e.target.value),
