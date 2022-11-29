@@ -7,14 +7,14 @@ div.card img {
     width: 26rem;
 }
 
-.cardElements{
+.cardElements {
     font-size: 1.3rem;
     top: 0;
     position: absolute;
     width: 100%;
     height: 100%;
     color: #fff;
-    padding:  1rem 1rem;
+    padding: 1rem 1rem;
 
     display: flex;
     flex-direction: column;
@@ -23,37 +23,38 @@ div.card img {
     word-spacing: 0.2rem;
 }
 
-.circles{
+.circles {
     display: flex;
     margin-bottom: 15%;
     align-items: center;
     gap: 8px;
 }
 
-.circles div:first-child{
+.circles div:first-child {
     border: 1px solid #FFF;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     background-color: #FFF;
 }
-.circles div:last-child{
+
+.circles div:last-child {
     border: 1px solid #FFF;
     width: 1.8rem;
     height: 1.8rem;
     border-radius: 50%;
 }
 
-.cardNumber{
+.cardNumber {
     margin-bottom: 2rem;
     font-size: 1.7rem;
 }
 
-.cardName{
+.cardName {
     text-transform: uppercase;
 }
 
-.cardNameExp{
+.cardNameExp {
     display: flex;
     justify-content: space-between;
 }
@@ -61,28 +62,45 @@ div.card img {
 
 
 @media (min-width: 1100px) {
+
+    @keyframes animation {
+        from {
+            transform: translateY(-10%);
+        }
+
+        to {
+            transform: translateY(10%);
+        }
+    }
+
+    div#front{
+        animation: animation 1s ease-in-out infinite alternate;
+    }
+
+
     div.card img {
         width: 35rem;
     }
 
-    .cardElements{
+    .cardElements {
         font-size: 1.6rem;
     }
 
-    .cardNumber{
+    .cardNumber {
         font-size: 2rem;
-        
+
     }
 
-    .circles{
+    .circles {
         margin-bottom: 20%;
     }
 
-    .circles div:first-child{
+    .circles div:first-child {
         width: 4rem;
         height: 4rem;
     }
-    .circles div:last-child{
+
+    .circles div:last-child {
         width: 2.3rem;
         height: 2.3rem;
     }
@@ -94,25 +112,26 @@ div.card img {
         width: 45rem;
     }
 
-    .cardElements{
+    .cardElements {
         font-size: 1.8rem;
     }
 
-    .cardNumber{
+    .cardNumber {
         font-size: 2.4rem;
         margin-bottom: 2.5rem;
-        
+
     }
 
-    .circles{
+    .circles {
         margin-bottom: 22%;
     }
 
-    .circles div:first-child{
+    .circles div:first-child {
         width: 5rem;
         height: 5rem;
     }
-    .circles div:last-child{
+
+    .circles div:last-child {
         width: 2.8rem;
         height: 2.8rem;
     }

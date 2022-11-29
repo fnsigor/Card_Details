@@ -1,10 +1,10 @@
 import img from '../../assets/bg-card-front.png'
-import css from'./Style.module.css'
-import React, {useState} from 'react'
+import css from './Style.module.css'
+import React, { useState } from 'react'
 import { mask as masker } from 'remask'
 
 
-export function FrontCard({ number, name, mm, yy }) {
+export function FrontCard({ number, name, mm, yy, frontFloat }) {
 
     const [mask, setMask] = useState(["SSSS SSSS SSSS SSSS"]);
     const maskedNumber= masker(number, mask)
@@ -14,10 +14,10 @@ export function FrontCard({ number, name, mm, yy }) {
 
     return (
 
-        <div className="absoluteBox">
-            <div className={css.card} id="front">
+        <div className={ `absoluteBox x ${frontFloat ? "runningAnimation" : "pausedAnimation" }` } id="front">
+            <div className={css.card} >
                 <img src={img} alt="Frente do cartão" />
-                
+
                 <div className={css.cardElements}>
                     <div className={css.circles}>
                         <div></div>
