@@ -12,6 +12,15 @@ input {
     border: 1px solid var(--Dark-grayish-violet);
     border-radius: 5px;
     padding: 1rem;
+    outline-color: hsla(279, 36%, 46%, 0.719);
+}
+
+input:focus {
+    background-color: hsla(279, 36%, 46%, 0.08);
+
+    transition-property: all;
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
 }
 
 label {
@@ -32,17 +41,17 @@ label {
     margin-bottom: 2rem;
 }
 
-.numbers input{
+.numbers input {
     width: 100%;
 }
 
-.containerInputs{
+.containerInputs {
     display: flex;
     flex-grow: 1;
     gap: 2rem;
 }
 
-.expInputs{
+.expInputs {
     display: flex;
     gap: 1rem;
 }
@@ -61,7 +70,7 @@ button {
     transition-timing-function: ease-out;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     background-color: hsl(279, 54%, 29%);
 }
@@ -84,7 +93,7 @@ p::before {
 }
 
 @media (min-width: 1450px) {
-    form{
+    form {
         max-width: none;
         width: 48rem;
         gap: 2.5rem;
