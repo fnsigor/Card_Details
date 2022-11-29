@@ -56,6 +56,14 @@ button {
     font-size: 1.8rem;
     border-radius: 5px;
     background-color: var(--Very-dark-violet);
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(279, 54%, 29%);
 }
 
 p {
